@@ -8,8 +8,8 @@ use Cake\ORM\Query;
 use ArrayObject;
 use Cake\Cache\Cache;
 
-class FindInFileCacheBehavior extends Behavior {
-
+class FindInFileCacheBehavior extends Behavior
+{
     protected $_defaultConfig = [
         'className' => 'File',
         'prefix' => 'myapp_cake_static_record_',
@@ -78,5 +78,4 @@ class FindInFileCacheBehavior extends Behavior {
         }
         return $name;
     }
-
 }
