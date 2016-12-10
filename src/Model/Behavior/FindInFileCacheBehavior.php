@@ -53,11 +53,11 @@ class FindInFileCacheBehavior extends Behavior
     private function cacheKey(Query $query)
     {
         $key = $this->_table->alias();
-        if (!empty($query->clause('select'))) {
-            $key .= serialize($query->clause('select'));
-        }
-        if (!empty($query->clause('where'))) {
-            $key .= serialize($query->clause('where'));
+        $elements = ['select', 'where', 'group', 'order', 'limit'];
+        foreach ($elements as $element) {
+            if (!empty($query->clause($element))) {
+                $key .= serialize($query->clause($element));
+            }
         }
         return md5($key);
     }
