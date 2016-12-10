@@ -7,6 +7,9 @@
 		"php": ">=5.5",
 		"cakephp/cakephp": "~3.3"
 	},
+    "require-dev": {
+        "fabpot/php-cs-fixer": "*"
+    },
 	"autoload": {
 		"psr-4": {
 			"FindInFileCache\\": "src"
