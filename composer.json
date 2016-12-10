@@ -1,5 +1,5 @@
 {
-	"name": "m-shimao/cakephp-file-cache",
+	"name": "m-shimao/find-in-file-cache",
 	"description": "File Cache plugin for CakePHP",
 	"type": "cakephp-plugin",
 	"license": "MIT",
@@ -9,7 +9,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"FileCache\\": "src"
+			"FindInFileCache\\": "src"
 		}
 	}
 }
