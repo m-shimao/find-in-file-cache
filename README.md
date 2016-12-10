@@ -8,7 +8,7 @@ If you want to use file cache for static model, this plugin is easy to use.
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
 The recommended way to install composer packages is:
 ```
-composer require m-shimao/find-in-file-cache
+composer require m-shimao/find-in-file-cache dev-master
 ```
 
 Also don't forget to load the plugin in your bootstrap:
