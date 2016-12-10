@@ -39,7 +39,7 @@ Default Setting is below.
 'duration' => '+15 minutes',↲
 'mask' => 0666,↲
 ```
-If you use original setting, like below.
+If you use original setting, please edit cache section in app.php.
 ```
 <?php
 return [
