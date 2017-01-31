@@ -41,6 +41,8 @@ class FindInFileCacheBehavior extends Behavior
         if (isset($results)) {
             $query->setResult($results);
             $event->stopPropagation();
+            // Disable caching for this query used again
+            $query->cache(false);
         }
     }
 
