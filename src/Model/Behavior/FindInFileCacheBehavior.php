@@ -38,9 +38,14 @@ class FindInFileCacheBehavior extends Behavior
 
         $results = Cache::read($key, $config);
         // Stop after events include find event
-        if (isset($results)) {
+        if (isset($results) && $results !== false) {
             $query->setResult($results);
             $event->stopPropagation();
+            // Disable _decorateResults
+            // Because cache is stored after decorate result sets, decorate is executed double.
+            $overwrite = true;
+            $query->mapReduce(null, null, $overwrite);
+            $query->formatResults(null, $overwrite);
             // Disable caching for this query used again
             $query->cache(false);
         }
